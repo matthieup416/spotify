@@ -50,7 +50,7 @@ const Home: NextPage<{ songs: Song[] }> = ({ songs }) => {
   return (
     <div className={styles.container}>
       <div className={styles.songPlaying}>
-        <Song song={} isPlaying={} />
+        <Song song={songs[trackPlaying]} isPlaying={isPlaying} />
       </div>
       <Audio
         isPlaying={}
