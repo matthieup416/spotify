@@ -1,0 +1,11 @@
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  margin: 1rem auto;
+}
+
+.controlsAudioPlayer {
+  display: none;
+}
