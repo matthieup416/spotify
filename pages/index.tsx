@@ -2,15 +2,8 @@ import type { NextPage } from 'next'
 import { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
-type Song = {
-  id: number
-  type: string
-  artist: string
-  file: string
-  image: string
-}
-
+import Song from '../components/Song/Song'
+import Audio from '../components/Audio/Audio'
 const SONGS: Song[] = [
   {
     id: 0,
@@ -46,7 +39,7 @@ export const getStaticProps = async () => {
 }
 const Home: NextPage<{ songs: Song[] }> = ({ songs }) => {
   const [trackPlaying, setTrackPlaying] = useState<number>(0)
-  const [isPlaying, setIsplaying] = useState<boolean>(false)
+  const [isPlaying, setIsplaying] = useState<boolean>(true)
   return (
     <div className={styles.container}>
       <div className={styles.songPlaying}>
